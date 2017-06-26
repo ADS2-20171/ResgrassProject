@@ -1,0 +1,74 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="localSaveCtrl">
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/list/60.jpeg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                            <span class="md-headline">Registro de locales</span>
+                            <span class="md-subhead">Locales</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Nombre Local</label>
+                                <input name="cat_sect_nombre" ng-model="local.nombre_local" required>
+                                <div ng-messages="dForm.cat_sect_nombre.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Direccion</label>
+                                <input name="cat_sect_descripcion" ng-model="local.direccion" required>
+                                <div ng-messages="dForm.cat_sect_descripcion.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Numero Telefono</label>
+                                <input name="cat_sect_descripcion" ng-model="local.numero_telefono" required>
+                                <div ng-messages="dForm.cat_sect_descripcion.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>email</label>
+                                <input name="cat_sect_descripcion" ng-model="local.email" required>
+                                <div ng-messages="dForm.cat_sect_descripcion.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Empresa</label>
+                                <md-select ng-model="local.empresa">
+                                    <md-option ng-repeat="o in empresas" value="{{o.id}}">
+                                        {{o.razon_social}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+
+                        </div>
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="categoriaSector.id == null">Create</span>
+                            <span ng-show="categoriaSector.id">Update</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

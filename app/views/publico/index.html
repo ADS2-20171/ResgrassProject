@@ -1,0 +1,37 @@
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+
+        <h2 flex md-truncate>Reservacion de Canchas Glass en Juliaca</h2>
+
+        <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<div ng-controller="publicCtrl" ng-cloak >
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div class='md-padding' layout="row" layout-wrap>
+            <!--md-card style="width: 350px;" ng-repeat="user in users"-->
+            <md-card style="width: 350px;" ng-repeat="c in canchas">
+                <img src="http://www.canchasperu.com/Imagenes/Canchas/IMG00310.jpg" class="md-card-image" alt="user avatar">
+                <md-card-content>
+                    <h2>{{c.nombre}}</h2>
+                    <h3>{{c.precio}} S/.</h3>
+                    <p>{{c.descripcion}}</p>
+                </md-card-content>
+                <div class="md-actions" layout="row" layout-align="end center">
+                    <md-button ng-click="reservar()">Reservar</md-button>
+                    <md-button>Ver</md-button>
+                </div>
+            </md-card>
+        </div>
+    </md-content>
+</div>

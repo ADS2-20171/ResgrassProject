@@ -1,0 +1,71 @@
+{
+
+    "menu": [
+
+        {
+            "title": "Resgrass",
+            "state": "catalogo.dashboard",
+            "type": "link"
+        },
+
+
+
+
+        {
+            "title": "Ajustes",
+            "type": "toggle",
+            "state": "catalogo.catalogo",
+            "menu_items": [
+                {
+                    "title": "Instituciones",
+                    "state": "catalogo.catalogo.instituciones",
+                    "type": "link"
+                },
+                {
+                    "title": "Empresas",
+                    "state": "catalogo.catalogo.empresa",
+                    "type": "link"
+                },
+                {
+                    "title": "Locales",
+                    "state": "catalogo.catalogo.local",
+                    "type": "link"
+                },
+
+
+                {
+                    "title": "Reservas",
+                    "state": "catalogo.catalogo.agendas",
+                    "type": "link"
+                },
+
+                {
+                    "title": "categoria sector",
+                    "state": "catalogo.catalogo.catSec",
+                    "type": "link"
+                }
+
+            ]
+        },
+        {
+            "title": "Publico",
+            "type": "toggle",
+            "state": "catalogo.catalogo",
+            "menu_items": [
+                {
+                    "title": "frontprinsipal",
+                    "state": "catalogo.catalogo.publico",
+                    "type": "link"
+                },
+                {
+                    "title": "calendar",
+                    "state": "catalogo.catalogo.calendar",
+                    "type": "link"
+                }
+
+            ]
+        }
+
+    ]
+
+}
