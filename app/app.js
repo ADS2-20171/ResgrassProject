@@ -24,8 +24,8 @@ var app = angular.module("gestion_acuerdo", [
 //====================================================
 // Constantes de la app
 //====================================================
-app.constant("authUrl", "http://l1"); // Authorization Server -> oauth2_backend_service
-app.constant("apiUrl", "http://192.168.149.9:9000"); // Resource Server -> acuerdos
+app.constant("authUrl", "http://localhost:8001"); // Authorization Server -> oauth2_backend_service
+app.constant("apiUrl", "http://localhost:8000"); // Resource Server -> acuerdos
 
 app.constant("homeUrl", "http://localhost:9001"); // Página de inicio o de convergencia
 
